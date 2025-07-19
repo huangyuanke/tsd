@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>糖少点 - 技术支持</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --color-primary: #4abe9a;
+            --color-secondary: #5b9bd5;
+            --color-warning: #f59e0b;
+            --color-danger: #ef4444;
+            --color-info: #3b82f6;
+            --color-text-primary: #1f2937;
+            --color-text-secondary: #4b5563;
+            --color-text-tertiary: #6b7280;
+            --color-background: #f8f9fa;
+            --color-card-bg: #ffffff;
+            --color-success-bg: #dcfce7;
+            --color-warning-bg: #fef3c7;
+            --color-danger-bg: #fee2e2;
+            --color-info-bg: #dbeafe;
+        }
+
+        body {
+            font-family: 'PingFang SC', 'Helvetica Neue', Arial, sans-serif;
+            background-color: var(--color-background);
+            color: var(--color-text-primary);
+            line-height: 1.6;
+        }
+
+        .card {
+            background-color: var(--color-card-bg);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 16px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .btn-primary {
+            background-color: var(--color-primary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary:hover {
+            background-color: #3daa8a;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(74, 190, 154, 0.3);
+        }
+
+        .btn-secondary {
+            background-color: var(--color-secondary);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-secondary:hover {
+            background-color: #4a8bc5;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(91, 155, 213, 0.3);
+        }
+
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e6f7f2 0%, #eaf2fa 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #f0f0f0;
+            padding: 16px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            color: var(--color-text-primary);
+            margin-bottom: 8px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            color: var(--color-text-secondary);
+            font-size: 14px;
+            line-height: 1.6;
+            display: none;
+        }
+
+        .faq-answer.show {
+            display: block;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 12px;
+            font-weight: 500;
+            margin-left: 8px;
+        }
+
+        .status-success {
+            background-color: var(--color-success-bg);
+            color: var(--color-primary);
+        }
+
+        .status-warning {
+            background-color: var(--color-warning-bg);
+            color: var(--color-warning);
+        }
+
+        .status-info {
+            background-color: var(--color-info-bg);
+            color: var(--color-info);
+        }
+
+        .gradient-header {
+            background: linear-gradient(135deg, #e6f7f2 0%, #eaf2fa 100%);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 24px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .contact-item:last-child {
+            border-bottom: none;
+        }
+
+        .contact-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: var(--color-primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 16px;
+            }
+            
+            .card {
+                padding: 16px;
+            }
+            
+            .gradient-header {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto max-w-4xl px-4 py-8">
+        <!-- 页面头部 -->
+        <div class="gradient-header text-center">
+            <div class="icon-circle">
+                <i class="fas fa-heart text-2xl" style="color: var(--color-primary);"></i>
+            </div>
+            <h1 class="text-2xl font-bold text-gray-800 mb-2">糖少点技术支持</h1>
+            <p class="text-gray-600">您的智能控糖助手，我们随时为您提供帮助</p>
+        </div>
+
+        <!-- 快速联系 -->
+        <div class="card">
+            <h2 class="text-xl font-semibold mb-4 flex items-center">
+                <i class="fas fa-headset text-primary mr-2" style="color: var(--color-primary);"></i>
+                联系我们
+            </h2>
+            
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="flex-1">
+                    <div class="font-medium">客服邮箱</div>
+                    <div class="text-gray-600">hyuanke@foxmail.com</div>
+                </div>
+                <a href="mailto:hyuanke@foxmail.com" class="btn-primary">
+                    <i class="fas fa-paper-plane"></i>
+                    发送邮件
+                </a>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <div class="flex-1">
+                    <div class="font-medium">服务时间</div>
+                    <div class="text-gray-600">周一至周五 9:00-18:00</div>
+                </div>
+                <span class="status-badge status-success">在线</span>
+            </div>
+
+            <div class="contact-item">
+                <div class="contact-icon">
+                    <i class="fas fa-reply"></i>
+                </div>
+                <div class="flex-1">
+                    <div class="font-medium">响应时间</div>
+                    <div class="text-gray-600">24小时内回复</div>
+                </div>
+                <span class="status-badge status-info">快速</span>
+            </div>
+        </div>
+
+        <!-- 常见问题 -->
+        <div class="card">
+            <h2 class="text-xl font-semibold mb-4 flex items-center">
+                <i class="fas fa-question-circle text-primary mr-2" style="color: var(--color-primary);"></i>
+                常见问题
+            </h2>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>如何开始使用糖少点？</span>
+                    <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+                </div>
+                <div class="faq-answer">
+                    首次使用糖少点时，请按照以下步骤操作：<br>
+                    1. 在"我的"页面完善个人信息，包括身高、体重、健康状态等<br>
+                    2. 设置血糖单位偏好（mmol/L或mg/dL）<br>
+                    3. 开始记录血糖数据，建议从空腹血糖开始<br>
+                    4. 使用拍照功能记录饮食，获得个性化建议<br>
+                    5. 根据餐后运动建议进行适当运动
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>血糖记录的标准是什么？</span>
+                    <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+                </div>
+                <div class="faq-answer">
+                    糖少点根据您的健康状态自动调整血糖标准：<br>
+                    <strong>妊娠期糖尿病：</strong>空腹≤5.3mmol/L，餐后1小时≤7.8mmol/L，餐后2小时≤6.7mmol/L<br>
+                    <strong>糖尿病前期：</strong>空腹≤6.1mmol/L，餐后2小时≤7.8mmol/L<br>
+                    <strong>糖尿病：</strong>空腹≤7.0mmol/L，餐后2小时≤10.0mmol/L<br>
+                    系统会自动判断您的血糖状态并给出相应建议。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>拍照识别食物功能如何使用？</span>
+                    <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+                </div>
+                <div class="faq-answer">
+                    拍照识别功能使用AI技术分析食物营养：<br>
+                    1. 在"饮食"页面点击相机按钮<br>
+                    2. 拍摄或选择食物照片<br>
+                    3. AI自动识别食物成分和营养信息<br>
+                    4. 系统提供个性化食用量建议<br>
+                    5. 调整食用量后保存记录<br>
+                    注意：此功能需要网络连接，建议在光线充足的环境下拍摄。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>餐后运动建议是如何计算的？</span>
+                    <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+                </div>
+                <div class="faq-answer">
+                    餐后运动建议基于以下因素智能计算：<br>
+                    1. <strong>餐食营养：</strong>根据食物GI值和碳水化合物含量<br>
+                    2. <strong>血糖水平：</strong>结合餐前血糖值调整运动强度<br>
+                    3. <strong>个人特征：</strong>考虑年龄、性别、BMI、健康状态<br>
+                    4. <strong>运动时间：</strong>建议餐后30分钟开始，持续20-40分钟<br>
+                    系统会推荐合适的步数和运动时长，帮助控制餐后血糖。
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>数据安全如何保障？</span>
+                    <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+                </div>
+                <div class="faq-answer">
+                    糖少点高度重视用户数据安全：<br>
+                    1. <strong>本地存储：</strong>健康数据主要存储在您的设备本地<br>
+                    2. <strong>加密保护：</strong>采用银行级别加密技术保护敏感信息<br>
+                    3. <strong>隐私控制：</strong>您可以随时删除个人数据<br>
+                    4. <strong>合规要求：</strong>严格遵守相关数据保护法规<br>
+                    5. <strong>最小权限：</strong>仅收集必要的健康数据用于个性化服务
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFAQ(this)">
+                    <span>如何获得更好的控糖效果？</span>
+                    <i class="fas fa-chevron-down text-gray-400 transition-transform"></i>
+                </div>
+                <div class="faq-answer">
+                    为了获得更好的控糖效果，建议：<br>
+                    1. <strong>规律监测：</strong>每日至少测量4次血糖，包括餐前和餐后<br>
+                    2. <strong>科学饮食：</strong>选择低GI食物，控制碳水化合物摄入<br>
+                    3. <strong>适量运动：</strong>坚持餐后运动，每次20-30分钟<br>
+                    4. <strong>定期分析：</strong>查看控糖分析报告，了解改进方向<br>
+                    5. <strong>医生沟通：</strong>定期与医生分享血糖数据，调整治疗方案<br>
+                    糖少点会持续为您提供个性化建议，帮助您实现血糖管理目标。
+                </div>
+            </div>
+        </div>
+
+        <!-- 功能特色 -->
+        <div class="card">
+            <h2 class="text-xl font-semibold mb-4 flex items-center">
+                <i class="fas fa-star text-primary mr-2" style="color: var(--color-primary);"></i>
+                功能特色
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="flex items-start space-x-3">
+                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-camera text-sm" style="color: var(--color-primary);"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium">AI食物识别</h3>
+                        <p class="text-sm text-gray-600">拍照即可识别食物营养，提供个性化食用建议</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-3">
+                    <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-chart-line text-sm" style="color: var(--color-secondary);"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium">智能分析</h3>
+                        <p class="text-sm text-gray-600">AI驱动的个性化控糖建议和趋势分析</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-3">
+                    <div class="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-walking text-sm" style="color: var(--color-warning);"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium">运动建议</h3>
+                        <p class="text-sm text-gray-600">基于餐食和血糖的个性化运动方案</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-3">
+                    <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center flex-shrink-0">
+                        <i class="fas fa-shield-alt text-sm" style="color: var(--color-info);"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-medium">数据安全</h3>
+                        <p class="text-sm text-gray-600">银行级别加密，保护您的健康隐私</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 使用指南 -->
+        <div class="card">
+            <h2 class="text-xl font-semibold mb-4 flex items-center">
+                <i class="fas fa-book text-primary mr-2" style="color: var(--color-primary);"></i>
+                使用指南
+            </h2>
+            
+            <div class="space-y-4">
+                <div class="flex items-start space-x-3">
+                    <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 text-white text-xs font-bold" style="background-color: var(--color-primary);">1</div>
+                    <div>
+                        <h3 class="font-medium">完善个人信息</h3>
+                        <p class="text-sm text-gray-600">设置身高、体重、健康状态等基本信息，获得个性化建议</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-3">
+                    <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 text-white text-xs font-bold" style="background-color: var(--color-primary);">2</div>
+                    <div>
+                        <h3 class="font-medium">记录血糖数据</h3>
+                        <p class="text-sm text-gray-600">定期测量并记录血糖值，系统自动分析趋势</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-3">
+                    <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 text-white text-xs font-bold" style="background-color: var(--color-primary);">3</div>
+                    <div>
+                        <h3 class="font-medium">拍照记录饮食</h3>
+                        <p class="text-sm text-gray-600">使用AI识别食物营养，获得科学饮食建议</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-3">
+                    <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 text-white text-xs font-bold" style="background-color: var(--color-primary);">4</div>
+                    <div>
+                        <h3 class="font-medium">执行运动建议</h3>
+                        <p class="text-sm text-gray-600">根据个性化运动方案，进行餐后运动</p>
+                    </div>
+                </div>
+
+                <div class="flex items-start space-x-3">
+                    <div class="w-6 h-6 bg-primary rounded-full flex items-center justify-center flex-shrink-0 text-white text-xs font-bold" style="background-color: var(--color-primary);">5</div>
+                    <div>
+                        <h3 class="font-medium">查看分析报告</h3>
+                        <p class="text-sm text-gray-600">定期查看控糖分析，了解改进方向</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 底部信息 -->
+        <div class="text-center py-8 text-gray-500 text-sm">
+            <!--<p>© 2024 糖少点科技有限公司 版权所有</p>-->
+            <p class="mt-2">让科技为您的健康保驾护航</p>
+        </div>
+    </div>
+
+    <script>
+        function toggleFAQ(element) {
+            const answer = element.nextElementSibling;
+            const icon = element.querySelector('i');
+            
+            if (answer.classList.contains('show')) {
+                answer.classList.remove('show');
+                icon.style.transform = 'rotate(0deg)';
+            } else {
+                answer.classList.add('show');
+                icon.style.transform = 'rotate(180deg)';
+            }
+        }
+
+        // 页面加载完成后的动画效果
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.style.transform = 'translateY(20px)';
+                setTimeout(() => {
+                    card.style.transition = 'all 0.6s ease';
+                    card.style.opacity = '1';
+                    card.style.transform = 'translateY(0)';
+                }, index * 100);
+            });
+        });
+    </script>
+</body>
+</html> 
