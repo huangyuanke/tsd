@@ -1,14 +1,23 @@
-# 用户协议
-## 服务条款
-欢迎使用糖少点APP！在使用我们的服务之前，请仔细阅读并理解本用户协议。
-1. 服务说明
-糖少点是一款血糖管理应用，旨在帮助用户记录、分析和管理血糖数据。
-2. 用户责任
-用户应确保所输入的健康数据准确无误，并对基于该数据产生的任何后果承担责任。
-3. 服务限制
-本应用不能替代专业医疗建议，用户应在医生指导下使用本应用。
+# User Agreement
 
-## 使用规则
-* 用户必须年满18周岁或在监护人同意下使用本应用
-* 禁止使用本应用进行任何违法活动
-* 用户应保护好自己的账户信息和数据安全
+## Terms of Service
+
+Welcome to SugarControl APP! Before using our services, please carefully read and understand this User Agreement.
+
+## 1. Service Description
+
+SugarControl is a blood glucose management application designed to help users record, analyze, and manage blood glucose data.
+
+## 2. User Responsibilities
+
+Users should ensure that the health data entered is accurate and assume responsibility for any consequences arising from such data.
+
+## 3. Service Limitations
+
+This application cannot replace professional medical advice. Users should use this application under the guidance of a physician.
+
+## Usage Rules
+
+• Users must be at least 18 years old or use this application with guardian consent
+• It is prohibited to use this application for any illegal activities
+• Users should protect their account information and data security
