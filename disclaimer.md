@@ -1,15 +1,22 @@
-# 免责声明
-糖少点APP仅作为血糖管理的辅助工具，不能替代专业医疗诊断、治疗或建议。
-## 重要提示
-1. 非医疗诊断工具
-本应用提供的所有建议和分析仅供参考，不能用于疾病诊断或治疗决策。
-2. 数据准确性
-用户需确保输入数据的准确性，应用基于用户提供的数据进行分析，不对数据准确性承担责任。
-3. 个人责任
-用户应在医生指导下使用本应用，并对基于应用建议采取的任何行动承担个人责任。
+# Disclaimer
 
-## 使用建议
-* 定期咨询医生，不要仅依赖应用建议
-* 如有紧急情况，立即就医，不要延误
-* 血糖异常时应及时就医检查
-* 妊娠期用户应在医生指导下使用
+SugarControl APP serves only as an auxiliary tool for blood glucose management and cannot replace professional medical diagnosis, treatment, or advice.
+
+## 1. Not a Medical Diagnostic Tool
+
+All recommendations and analyses provided by this application are for reference only and cannot be used for disease diagnosis or treatment decisions.
+
+## 2. Data Accuracy
+
+Users are responsible for ensuring the accuracy of input data. The application performs analysis based on user-provided data and does not assume responsibility for data accuracy.
+
+## 3. Personal Responsibility
+
+Users should use this application under the guidance of a physician and assume personal responsibility for any actions taken based on the application's recommendations.
+
+## Usage Recommendations
+
+• Consult your doctor regularly; do not rely solely on application recommendations
+• In case of emergency, seek immediate medical attention without delay
+• Seek medical examination promptly when blood glucose levels are abnormal
+• Pregnant users should use this application under medical supervision
