@@ -1,18 +1,25 @@
-# 隐私政策
-## 数据收集
-我们收集以下类型的信息以提供更好的服务：
-* 基本信息：性别、年龄、身高、体重
-* 健康数据：血糖记录、饮食记录、运动记录
-* 设备信息：设备类型、操作系统版本
+# Privacy Policy
 
-## 数据使用
-您的数据将用于以下目的：
-* 提供个性化的血糖管理建议
-* 分析血糖趋势和健康状况
-* 改进应用功能和服务质量
+## Data Collection
 
-## 数据保护
-我们采取以下措施保护您的数据安全：
-* 使用加密技术存储和传输数据
-* 严格限制员工访问用户数据
-* 定期更新安全防护措施
+We collect the following types of information to provide better services:
+
+• **Basic Information**: Gender, age, height, weight
+• **Health Data**: Blood glucose records, dietary records, exercise records
+• **Device Information**: Device type, operating system version
+
+## Data Usage
+
+Your data will be used for the following purposes:
+
+• Provide personalized blood glucose management recommendations
+• Analyze blood glucose trends and health status
+• Improve application features and service quality
+
+## Data Protection
+
+We take the following measures to protect your data security:
+
+• Use encryption technology to store and transmit data
+• Strictly limit employee access to user data
+• Regularly update security protection measures
